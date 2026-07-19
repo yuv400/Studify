@@ -113,6 +113,8 @@ catch (error) {
 }
 };
 
+
+//delete subSection
 exports.deleteSubSection = async (req, res) => {
 try {
     const { subSectionId, sectionId } = req.body;

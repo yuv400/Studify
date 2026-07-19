@@ -123,7 +123,7 @@ exports.signup = async(req,res)=>{
     const hashedPassword = await bcrypt.hash(password, 10);
 
     //entry create in DB
-    const profileDetails = await Profiler.create({
+    const profileDetails = await Profile.create({
         gender:null,
         dateOfBirth:null,
         about:null,
