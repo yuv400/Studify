@@ -36,19 +36,19 @@ https://studify-backend-7ghk.onrender.com
 
 ## Tech Stack
 
-Frontend
+### Frontend
 - React.js
 - Redux Toolkit
 - Tailwind CSS
 - React Router
 
-Backend
+### Backend
 - Node.js
 - Express.js
 - MongoDB
 - Mongoose
 
-Other Tools
+### Other Tools
 - Cloudinary
 - Razorpay
 - JWT Authentication
@@ -58,18 +58,11 @@ Other Tools
 
 ---
 
-
 ## 📸 Screenshots
 
 ### 🏠 Home Page
 
 ![Home Page](./screenshots/home-page.png)
-
----
-
-### 👤 Student Profile
-
-![Student Profile](./screenshots/student-profile.png)
 
 ---
 
@@ -79,23 +72,23 @@ Other Tools
 
 ---
 
-### 📚 Course Management
+### 👨‍🏫 Instructor Profile
 
-![Course Management](./screenshots/my-courses.png)
-
----
-
-### 💳 Razorpay Payment Gateway
-
-![Payment Gateway](./screenshots/payment-gateway.png)
+![Instructor Profile](./screenshots/instructor-profile.png)
 
 ---
 
-### ✅ Payment Successful
+### 👤 Student Profile
 
-![Payment Success](./screenshots/payment-success.png)
+![Student Profile](./screenshots/student-profile.png)
+
 ---
 
+### 📚 Enrolled Courses
+
+![Enrolled Courses](./screenshots/my-courses.png)
+
+---
 
 ## Run Locally
 
@@ -135,7 +128,7 @@ npm run dev
 
 ## Environment Variables
 
-Backend
+### Backend
 
 ```env
 PORT=
@@ -149,7 +142,7 @@ RAZORPAY_SECRET=
 CLIENT_URL=
 ```
 
-Frontend
+### Frontend
 
 ```env
 REACT_APP_BASE_URL=https://studify-backend-7ghk.onrender.com/api/v1
@@ -172,20 +165,22 @@ Building this project helped me understand:
 
 ---
 
+## Challenges Faced
+
+- Managing multiple user roles (Student & Instructor)
+- Integrating Razorpay payment verification
+- Handling secure JWT authentication
+- Uploading videos and images using Cloudinary
+- Deploying frontend and backend separately while configuring CORS
+
+---
+
 ## Author
 
-Yuvraj Singh
+**Yuvraj Singh**
 
 GitHub:
 https://github.com/yuv400
 
 LinkedIn:
 https://www.linkedin.com/in/yuvraj-singh-312581290/
-
-
-## Challenges Faced
-- Managing multiple user roles (Student & Instructor)
-- Integrating Razorpay payment verification
-- Handling secure JWT authentication
-- Uploading videos and images using Cloudinary
-- Deploying frontend and backend separately while configuring CORS
