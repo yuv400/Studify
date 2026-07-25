@@ -21,9 +21,6 @@ export default function Instructor() {
       const instructorApiData = await getInstructorData(token);
       const result = await fetchInstructorCourses(token);
 
-      console.log("GET_INSTRUCTOR_API_RESPONSE", instructorApiData);
-      console.log("INSTRUCTOR COURSES API RESPONSE", result);
-
       if (Array.isArray(instructorApiData)) {
         setInstructorData(instructorApiData);
       } else {
