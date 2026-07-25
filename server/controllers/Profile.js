@@ -218,11 +218,37 @@ exports.getEnrolledCourses = async (req, res) => {
 }
 
 exports.instructorDashboard = async (req, res) => {
-  console.log("=== NEW DASHBOARD CODE RUNNING ===");
+  try {
+    const courseDetails = await Course.find({
+      instructor: req.user.id,
+    });
 
-  return res.status(200).json({
-    success: true,
-    message: "Dashboard working",
-    user: req.user,
-  });
+    const courseData = courseDetails.map((course) => {
+      const totalStudentsEnrolled =
+        course.studentsEnrolled?.length || 0;
+
+      const totalAmountGenerated =
+        totalStudentsEnrolled * course.price;
+
+      return {
+        _id: course._id,
+        courseName: course.courseName,
+        courseDescription: course.courseDescription,
+        totalStudentsEnrolled,
+        totalAmountGenerated,
+      };
+    });
+
+    return res.status(200).json({
+      success: true,
+      courses: courseData,
+    });
+  } catch (error) {
+    console.error("Instructor Dashboard Error:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
 };
